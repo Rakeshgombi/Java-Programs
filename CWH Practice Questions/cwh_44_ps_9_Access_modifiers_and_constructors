@@ -1,0 +1,140 @@
+/*
+
+1) create a class cylinder and use getter and setters to set its
+radius and height 
+
+*/
+
+class Cylinder{
+    private int radius;
+    private int height;
+
+    // public void setRadius(int n){
+    //     radius = n;
+    // }
+    // public void setHeight(int i){
+    //     height = i;
+    // }
+    // public int getRadius(){
+    //     return radius;
+    // }
+    // public int getHeight(){
+    //     return height;
+    // }
+
+
+/* 
+3) Use a constructor and repeat ➊
+
+    public Cylinder(int radius, int height){
+        this.radius = radius;
+        this.height = height;
+    }
+*/
+    
+/* 2) use ➊ to calculate surface and volume of the cylinder
+
+    public double surface(){
+        double surface = 2 * Math.PI * radius * height + 2 * Math.PI * radius * radius;
+        return surface;
+    }
+
+    public double volume(){
+        double volume = Math.PI * radius * radius * height;
+        return volume;
+    }
+
+    */
+}
+
+/*
+4) Overload a constructor used to initialize a rectangle of length and breath 5 for using custom parameters 
+
+class Rectangle{
+    private int l;
+    private int b;
+
+    Rectangle(){
+        this.l = 4;
+        this.b = 6;
+    }
+    Rectangle(int l, int b){
+        this.l = l;
+        this.b = b;
+    }
+    public int getLength() {
+        return l;
+    }
+
+    public int getBreadth() {
+        return b;
+    }
+}
+/*
+
+5) Repeat ➊ for a sphere
+
+*/
+class Sphere{
+    private int radius;
+
+    public void setRadius(int n){
+        radius = n;
+    }
+    public int getRadius(){
+        return radius;
+    }
+
+    public double surface(){
+        double surface = 4 * Math.PI * radius * radius;
+        return surface;
+    }
+
+    public double volume(){
+        double volume = 1.333333333 * (Math.PI * radius * radius * radius);
+        return volume;
+    }
+
+}
+
+
+public class Program
+{
+    public static void main(String[] args) {
+
+        /* 
+        Exercise 1
+		Cylinder cl = new Cylinder();
+        cl.setRadius(4);
+        cl.setHeight(7);
+        System.out.printf("Radius: %d & Height: %d\n", cl.getRadius(), cl.getHeight());
+        */
+
+        /* Exercise 2
+        System.out.printf("Surface: %f square units & Volume: %f cubic units\n", cl.surface(), cl.volume());
+        */
+        
+        /* Exercise 3
+        Cylinder cl2= new Cylinder(4, 7);
+        System.out.printf("Surface: %f square units & Volume: %f cubic units\n", cl2.surface(), cl2.volume());
+        */
+
+        /*
+        Exercise 4
+        Rectangle re = new Rectangle(5, 7);
+        
+        System.out.println(re.getLength());
+        System.out.println(re.getBreadth());
+        */
+        
+        /*
+        Exercise 5
+        */
+        Sphere sp = new Sphere();
+        sp.setRadius(5);
+
+        System.out.println(sp.getRadius());
+        System.out.printf("Surface: %f & Volume: %f \n", sp.surface(), sp.volume());
+        
+	}
+}
